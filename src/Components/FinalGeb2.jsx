@@ -104,7 +104,7 @@ export function FinalGeb2(props) {
         geometry={nodes.Plane028.geometry}
         material={materials["Material.143"]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.Cube059.geometry}
         material={materials["Material.020"]}
       />
@@ -115,8 +115,8 @@ export function FinalGeb2(props) {
       <mesh
         geometry={nodes.Cube037.geometry}
         material={materials["Material.129"]}
-      />
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Cube021.geometry}
         material={materials["Material.129"]}
       />
@@ -131,7 +131,7 @@ export function FinalGeb2(props) {
       <mesh
         geometry={nodes.Cube001.geometry}
         material={materials["Material.020"]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Cube002.geometry}
         material={materials["Material.020"]}

@@ -11,9 +11,9 @@ export function GEB4(props) {
   const { nodes, materials } = useGLTF("/Models/GEB4-transformed.glb");
   //to change position and rotation of the model
   const { position, rotation, scale } = useControls("GEB4", {
-    position: { value: [197,5,-24], step: 2 },
+    position: { value: [219,5,-82], step: 2 },
     rotation: { value: [0, .6, 0], step: .2 },
-    scale: { value: 3, step: 0.1 },
+    scale: { value: .8, step: 0.1 },
   });
 
   return (
@@ -39,11 +39,11 @@ export function GEB4(props) {
       <mesh geometry={nodes.Cube091.geometry} material={materials['Material.026']} position={[-5.122, -4.803, 10.74]} rotation={[Math.PI, -1.566, Math.PI]} scale={0.098} />
       <mesh geometry={nodes.Cube003.geometry} material={materials.Geb2} position={[-5.298, 0.669, 15.111]} rotation={[Math.PI, -1.567, Math.PI]} scale={3.508} />
       <mesh geometry={nodes.Plane017.geometry} material={materials['Material.031']} />
-      <mesh geometry={nodes.Cube015.geometry} material={materials['Material.026']} />
+      {/* <mesh geometry={nodes.Cube015.geometry} material={materials['Material.026']} />
       <mesh geometry={nodes.Cube014.geometry} material={materials['Material.026']} />
       <mesh geometry={nodes.Cube013.geometry} material={materials['Material.026']} />
       <mesh geometry={nodes.Cube001.geometry} material={materials['Material.026']} />
-      <mesh geometry={nodes.Cube011.geometry} material={materials['Material.026']} />
+      <mesh geometry={nodes.Cube011.geometry} material={materials['Material.026']} /> */}
     </group>
   )
 }

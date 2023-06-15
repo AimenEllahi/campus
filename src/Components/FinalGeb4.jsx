@@ -16,9 +16,9 @@ export function FinalGeb4(props) {
 
   //to change position and rotation of the model
   const { position, rotation, scale } = useControls("FinalGeb4", {
-    position: { value: [54,-4, -102], step: 2 },
+    position: { value: [68,-4, -102], step: 2 },
     rotation: { value: [0, -6.1, 0], step: .2 },
-    scale: { value: 2.4, step: 0.1 },
+    scale: { value: 2.2, step: 0.1 },
   });
 
   return (

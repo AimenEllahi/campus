@@ -12,7 +12,7 @@ export function FinalGeb6(props) {
   //to change position and rotation of the model
   const { position, rotation, scale } = useControls("FinalGeb6", {
     position: { value: [91,5,87], step: 2 },
-    rotation: { value: [-0.1, -5.4, 0], step: .2 },
+    rotation: { value: [-0.1, -4.8, 0], step: .2 },
     scale: { value: 2.2, step: 0.1 },
   });
   return (
@@ -181,19 +181,19 @@ export function FinalGeb6(props) {
           material={materials["Emission_ Color_Palette"]}
         />
       </group>
-      <mesh
+      {/* <mesh
         geometry={nodes.Cube002.geometry}
         material={materials["Material.001"]}
       />
       <mesh
         geometry={nodes.Cube003_1.geometry}
         material={materials["Material.001"]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Plane005.geometry}
         material={materials["Material.011"]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.Cube001.geometry}
         material={materials["Material.001"]}
       />
@@ -236,7 +236,7 @@ export function FinalGeb6(props) {
       <mesh
         geometry={nodes.Cube089_3.geometry}
         material={materials["Material.035"]}
-      />
+      /> */}
     </group>
   );
 }

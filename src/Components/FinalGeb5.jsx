@@ -141,7 +141,7 @@ export function FinalGeb5(props) {
         geometry={nodes.Plane022.geometry}
         material={materials["Material.066"]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.Cube014.geometry}
         material={materials["Material.146"]}
       />
@@ -160,8 +160,8 @@ export function FinalGeb5(props) {
       <mesh
         geometry={nodes.Cube052.geometry}
         material={materials["Material.021"]}
-      />
-      <mesh
+      /> */}
+      {/* <mesh
         geometry={nodes.Cube012.geometry}
         material={materials["Material.021"]}
       />
@@ -176,7 +176,7 @@ export function FinalGeb5(props) {
       <mesh
         geometry={nodes.Cube002.geometry}
         material={materials["Material.021"]}
-      />
+      /> */}
       <mesh
         geometry={nodes._Light_Area_Of_Street_lamp_B.geometry}
         material={materials["Emission_ Color_Palette"]}
@@ -189,7 +189,7 @@ export function FinalGeb5(props) {
         position={[8.924, -2.832, 0]}
         scale={0.549}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.Cube145.geometry}
         material={materials["Material.146"]}
       />
@@ -200,7 +200,7 @@ export function FinalGeb5(props) {
       <mesh
         geometry={nodes.Cube145_2.geometry}
         material={materials["Material.146"]}
-      />
+      /> */}
     </group>
   );
 }
