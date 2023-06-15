@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Campus from './Components/Campus';
+import logo from "./logo.svg";
+import "./App.css";
+import Campus from "./Components/Index";
 
 function App() {
   return (
-    <div >
-     < Campus />
+    <div>
+      <Campus />
     </div>
   );
 }
