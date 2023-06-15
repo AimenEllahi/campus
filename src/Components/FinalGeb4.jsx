@@ -5,15 +5,24 @@ Command: npx gltfjsx@6.2.3 FinalGeb4.glb --transform
 
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { useControls } from 'leva';
 
-export function Model(props) {
+export function FinalGeb4(props) {
   const group = useRef()
   const { nodes, materials, animations } = useGLTF(
-    "/Mdoels/FinalGeb4-transformed.glb"
+    "/Models/FinalGeb4-transformed.glb"
   );
   const { actions } = useAnimations(animations, group)
+
+  //to change position and rotation of the model
+  const { position, rotation, scale } = useControls("FinalGeb4", {
+    position: { value: [54,-4, -102], step: 2 },
+    rotation: { value: [0, -6.1, 0], step: .2 },
+    scale: { value: 2.4, step: 0.1 },
+  });
+
   return (
-    <group ref={group} {...props} dispose={null}>
+    <group ref={group} {...props} dispose={null} position={position} rotation={rotation} scale={scale} >
       <group name="Scene">
         <group name="Street_FLF001" position={[-3.907, -2.927, 4.911]} rotation={[Math.PI, -0.005, Math.PI]}>
           <mesh name="Plane002_1" geometry={nodes.Plane002_1.geometry} material={materials.street} />

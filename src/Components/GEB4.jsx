@@ -5,11 +5,19 @@ Command: npx gltfjsx@6.2.3 GEB4.glb --transform
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useControls } from "leva";
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF("/Mdoels/GEB4-transformed.glb");
+export function GEB4(props) {
+  const { nodes, materials } = useGLTF("/Models/GEB4-transformed.glb");
+  //to change position and rotation of the model
+  const { position, rotation, scale } = useControls("GEB4", {
+    position: { value: [197,5,-24], step: 2 },
+    rotation: { value: [0, .6, 0], step: .2 },
+    scale: { value: 3, step: 0.1 },
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} position={position} rotation={rotation} scale={scale} >
       <group position={[-3.907, -2.853, 4.911]} rotation={[Math.PI, -0.005, Math.PI]} scale={1.457}>
         <mesh geometry={nodes.Plane002.geometry} material={materials.street} />
         <mesh geometry={nodes.Plane002_1.geometry} material={materials['roow.001']} />
