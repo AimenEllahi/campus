@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Campus from "./Components/Index";
+import Campus from "./Components/3D/Index";
 
 function App() {
   return (
