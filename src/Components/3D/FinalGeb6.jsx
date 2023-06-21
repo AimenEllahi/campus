@@ -15,9 +15,9 @@ export function FinalGeb6(props) {
       name='building2'
       {...props}
       dispose={null}
-      position={[91, 5, 87]}
-      rotation={[-0.1, -4.8, 0]}
-      scale={2.2}
+      position={[91, 5, 70]}
+      rotation={[-0.1, 1.2, 0]}
+      scale={1.7}
     >
       <mesh
         geometry={nodes.Cube003.geometry}

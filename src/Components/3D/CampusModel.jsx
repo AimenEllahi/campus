@@ -4,16 +4,18 @@ Command: npx gltfjsx@6.2.3 campusModel.glb --transform
 */
 
 import React, { useEffect } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useFBX, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 
 export function CampusModel(props) {
   const { nodes, materials } = useGLTF("/Models/campusModel-transformed.glb");
+  // const { scene } = useGLTF("/Models/Landscape.glb");
+  const model = useFBX("/Landscape.fbx");
   const { camera } = useThree();
   const { position, rotation } = useControls({
     position: {
-      value: [264, 37.200000000000045, -158],
+      value: [268, 37.2, -136] ,
       step: 2,
     },
     rotation: { value: [0.2, 2.4, -0.2], step: 0.2 },
@@ -24,6 +26,7 @@ export function CampusModel(props) {
     camera.position.set(...position);
     camera.rotation.set(...rotation);
   }, [position, rotation]);
+  console.log(model);
   return (
     <group name='campus' {...props} dispose={null}>
       <group position={[16.083, -23.741, 31.44]} scale={11.23}>
