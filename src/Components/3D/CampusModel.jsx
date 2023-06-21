@@ -11,11 +11,11 @@ import { useControls } from "leva";
 export function CampusModel(props) {
   const { nodes, materials } = useGLTF("/Models/campusModel-transformed.glb");
   // const { scene } = useGLTF("/Models/Landscape.glb");
-  const model = useFBX("/Landscape.fbx");
+
   const { camera } = useThree();
   const { position, rotation } = useControls({
     position: {
-      value: [268, 37.2, -136] ,
+      value: [268, 37.2, -136],
       step: 2,
     },
     rotation: { value: [0.2, 2.4, -0.2], step: 0.2 },
@@ -26,7 +26,7 @@ export function CampusModel(props) {
     camera.position.set(...position);
     camera.rotation.set(...rotation);
   }, [position, rotation]);
-  console.log(model);
+
   return (
     <group name='campus' {...props} dispose={null}>
       <group position={[16.083, -23.741, 31.44]} scale={11.23}>
