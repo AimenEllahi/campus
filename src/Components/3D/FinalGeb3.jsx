@@ -4,11 +4,16 @@ Command: npx gltfjsx@6.2.3 FinalGeb3.glb --transform
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 
 export function FinalGeb3(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb3-transformed.glb");
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.2, 0.2]}
+    polar={[0, 0]}
+  >
     <group
       name='building5'
       {...props}
@@ -112,6 +117,7 @@ export function FinalGeb3(props) {
         scale={2.016}
       />
     </group>
+  </PresentationControls>
   );
 }
 

@@ -12,7 +12,6 @@ export function FinalGeb2(props) {
   return (
     <PresentationControls
       enabled={true}
-      snap
       azimuth={[-0.2, 0.2]}
       polar={[0, 0]}
     >

@@ -4,28 +4,27 @@ Command: npx gltfjsx@6.2.3 Geb7.glb --transform
 */
 
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 import { useControls } from "leva";
 
 export function Geb7(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/Models/Geb7-transformed.glb");
-  const { position, rotation } = useControls("GEB7", {
-    position: {
-      value: [165, 2, 76],
-      step: 2,
-    },
-    rotation: { value: [0, 1.6, -0.2], step: 0.2 },
-  });
+
 
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.2, 0.2]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(7)}
       ref={group}
       {...props}
       dispose={null}
-      position={position}
-      rotation={rotation}
+      position={[165, 6, 76]}
+      rotation={[0, 1.6, -0.2]}
       scale={2}
     >
       <group name='Scene'>
@@ -687,6 +686,7 @@ export function Geb7(props) {
         />
       </group>
     </group>
+    </PresentationControls>
   );
 }
 

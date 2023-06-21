@@ -4,13 +4,18 @@ Command: npx gltfjsx@6.2.3 FinalGeb4.glb --transform
 */
 
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 
 export function FinalGeb4(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/Models/FinalGeb4-transformed.glb");
 
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.2, 0.03]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(4)}
       name='building4'
@@ -1489,6 +1494,7 @@ export function FinalGeb4(props) {
         </group>
       </group>
     </group>
+    </PresentationControls>
   );
 }
 
