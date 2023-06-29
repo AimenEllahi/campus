@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.3 FinalGeb6.glb --transform
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 import { useControls } from "leva";
 
 export function FinalGeb6(props) {
@@ -17,6 +17,11 @@ export function FinalGeb6(props) {
     rotation: { value: [-0.1, 1.2, 0], step: 0.2 },
   });
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.2, 0.2]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(6)}
       name='building2'
@@ -247,6 +252,7 @@ export function FinalGeb6(props) {
         material={materials["Material.035"]}
       /> */}
     </group>
+    </PresentationControls>
   );
 }
 

@@ -79,7 +79,6 @@ export default function Index() {
           <PresentationControls
             enabled={activeState === 0}
             polar={[0, 0]}
-            snap
             azimuth={[-0.2, 0.2]}
           >
             <CampusModel setActiveState={setActiveState} />

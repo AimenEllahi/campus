@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.3 Geb7.glb --transform
 */
 
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 import { useControls } from "leva";
 
 export function Geb7(props) {
@@ -12,14 +12,19 @@ export function Geb7(props) {
   const { nodes, materials } = useGLTF("/Models/Geb7-transformed.glb");
 
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.2, 0.2]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(7)}
       ref={group}
       {...props}
       dispose={null}
-      position={[199, 0, 0]}
-      rotation={[-0.1, -5.8, 0]}
-      scale={1.5}
+      position={position}
+      rotation={rotation}
+      scale={2}
     >
       <group name='Scene'>
         <group
@@ -680,6 +685,7 @@ export function Geb7(props) {
         />
       </group>
     </group>
+    </PresentationControls>
   );
 }
 

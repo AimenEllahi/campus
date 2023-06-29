@@ -4,12 +4,17 @@ Command: npx gltfjsx@6.2.3 FinalGeb5.glb --transform
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 import { useControls } from "leva";
 export function FinalGeb5(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb5-transformed.glb");
 
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.05, 0.05]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(5)}
       {...props}
@@ -203,6 +208,7 @@ export function FinalGeb5(props) {
         material={materials["Material.146"]}
       /> */}
     </group>
+    </PresentationControls>
   );
 }
 

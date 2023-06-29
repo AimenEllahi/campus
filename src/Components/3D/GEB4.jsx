@@ -4,20 +4,26 @@ Command: npx gltfjsx@6.2.3 GEB4.glb --transform
 */
 
 import React from "react";
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, PresentationControls } from "@react-three/drei";
 
 export function GEB4(props) {
   const { nodes, materials } = useGLTF(
     "/Models/FahrradStation-transformed.glb"
   );
+ 
 
   return (
+    <PresentationControls
+    enabled={true}
+    azimuth={[-0.05, 0.05]}
+    polar={[0, 0]}
+  >
     <group
       onClick={() => props.setActiveState(4)}
       {...props}
       dispose={null}
       position={[220, 8, -65]}
-      rotation={[0, 0.6, 0]}
+      rotation={[0, 0, 0]}
       scale={0.8}
     >
       <group name='Scene'>
@@ -340,6 +346,7 @@ export function GEB4(props) {
         </group>
       </group>
     </group>
+    </PresentationControls>
   );
 }
 
