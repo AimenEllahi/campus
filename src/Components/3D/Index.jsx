@@ -32,31 +32,29 @@ const CameraController = ({ activeState }) => {
         gsapAnimation({ x: 264, y: 37, z: -136 });
         break;
       case 1:
-        gsapAnimation({ x: 250, y: 15, z: -90 });
+        gsapAnimation({ x: 48, y: 15.2, z: -6 });
         break;
       case 2:
-        gsapAnimation({ x: 148, y: 15.2, z: 24 });
+        gsapAnimation({ x: 32, y: 9, z: -38 });
         break;
       case 3:
-        gsapAnimation({ x: 208, y: 17.2, z: -120 });
+        gsapAnimation({ x: 68, y: 13, z: -108 });
         break;
       case 4:
-        gsapAnimation({ x: 118, y: 7.2, z: -128 });
+        gsapAnimation({ x: 126, y: 3.2, z: -120 });
         break;
       case 5:
-        gsapAnimation({ x: 86, y: 29.2, z: -20 });
+        gsapAnimation({ x: 214, y: 7.2, z: -114 });
         break;
       case 6:
-        gsapAnimation({ x: 58, y: 13.2, z: -84 });
+        gsapAnimation({ x: 126, y: 11.2, z: 26 });
         break;
       case 7:
-        gsapAnimation({ x: 210, y: 7, z: 14 });
+        gsapAnimation({ x: 240, y: 1.2, z: -22 });
         break;
-      case 8:
-        gsapAnimation({ x: 210, y: 7, z: 14 });
-        break;
+
       case 9:
-        gsapAnimation({ x: 210, y: 7, z: 14 });
+        gsapAnimation({ x: 180, y: 5.2, z: 52 });
         break;
       default:
         break;

@@ -10,144 +10,143 @@ export function FinalGeb5(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb5-transformed.glb");
 
   return (
-    <PresentationControls
-    enabled={true}
-    azimuth={[-0.05, 0.05]}
-    polar={[0, 0]}
-  >
-    <group
-      onClick={() => props.setActiveState(5)}
-      {...props}
-      dispose={null}
-      position={[179, 4, -72]}
-      rotation={[-0.05, -6, 0]}
-      scale={1.1}
-    >
+    <PresentationControls enabled={true} azimuth={[-0.05, 0.05]} polar={[0, 0]}>
       <group
-        position={[0.356, -2.853, -15.024]}
-        rotation={[Math.PI, -0.005, Math.PI]}
+        onClick={() => props.setActiveState(5)}
+        {...props}
+        dispose={null}
+        position={[179, 1, -72]}
+        rotation={[-0.05, -6, 0]}
+        scale={1.1}
       >
-        <mesh geometry={nodes.Plane002.geometry} material={materials.street} />
+        <group
+          position={[0.356, -2.853, -15.024]}
+          rotation={[Math.PI, -0.005, Math.PI]}
+        >
+          <mesh
+            geometry={nodes.Plane002.geometry}
+            material={materials.street}
+          />
+          <mesh
+            geometry={nodes.Plane002_1.geometry}
+            material={materials["roow.001"]}
+          />
+          <mesh
+            geometry={nodes.Plane002_2.geometry}
+            material={materials["ручка.001"]}
+          />
+        </group>
         <mesh
-          geometry={nodes.Plane002_1.geometry}
-          material={materials["roow.001"]}
+          geometry={nodes.Text003.geometry}
+          material={materials["Material.062"]}
+          position={[8.214, -2.599, -12.946]}
+          rotation={[1.583, -0.006, -3.135]}
+          scale={1.597}
         />
         <mesh
-          geometry={nodes.Plane002_2.geometry}
-          material={materials["ручка.001"]}
-        />
-      </group>
-      <mesh
-        geometry={nodes.Text003.geometry}
-        material={materials["Material.062"]}
-        position={[8.214, -2.599, -12.946]}
-        rotation={[1.583, -0.006, -3.135]}
-        scale={1.597}
-      />
-      <mesh
-        geometry={nodes.Text.geometry}
-        material={materials["Material.016"]}
-        position={[8.424, -2.631, -11.971]}
-        rotation={[1.576, 0.003, -1.567]}
-        scale={1.656}
-      />
-      <mesh
-        geometry={nodes.Plane026.geometry}
-        material={materials["glass.004"]}
-        position={[8.392, -1.791, -7.958]}
-        rotation={[0, 0, -1.57]}
-      />
-      <mesh
-        geometry={nodes.Plane024.geometry}
-        material={materials["Material.066"]}
-        position={[8.419, 0.375, -7.958]}
-        rotation={[0, 0, -1.573]}
-      />
-      <mesh
-        geometry={nodes.Plane021.geometry}
-        material={materials["Material.046"]}
-        position={[17.745, -0.883, -6.214]}
-      />
-      <group
-        position={[8.491, -2.074, -8.304]}
-        rotation={[0, -0.969, 0]}
-        scale={0.019}
-      >
-        <mesh
-          geometry={nodes.Mesh001.geometry}
-          material={materials["dbl_Layer0_001.001"]}
+          geometry={nodes.Text.geometry}
+          material={materials["Material.016"]}
+          position={[8.424, -2.631, -11.971]}
+          rotation={[1.576, 0.003, -1.567]}
+          scale={1.656}
         />
         <mesh
-          geometry={nodes.Mesh001_1.geometry}
-          material={materials["dbl_Layer0_002.001"]}
+          geometry={nodes.Plane026.geometry}
+          material={materials["glass.004"]}
+          position={[8.392, -1.791, -7.958]}
+          rotation={[0, 0, -1.57]}
         />
         <mesh
-          geometry={nodes.Mesh001_2.geometry}
-          material={materials["dbl_Layer0_003.001"]}
+          geometry={nodes.Plane024.geometry}
+          material={materials["Material.066"]}
+          position={[8.419, 0.375, -7.958]}
+          rotation={[0, 0, -1.573]}
         />
         <mesh
-          geometry={nodes.Mesh001_3.geometry}
-          material={materials["dbl_Layer0_005.001"]}
+          geometry={nodes.Plane021.geometry}
+          material={materials["Material.046"]}
+          position={[17.745, -0.883, -6.214]}
+        />
+        <group
+          position={[8.491, -2.074, -8.304]}
+          rotation={[0, -0.969, 0]}
+          scale={0.019}
+        >
+          <mesh
+            geometry={nodes.Mesh001.geometry}
+            material={materials["dbl_Layer0_001.001"]}
+          />
+          <mesh
+            geometry={nodes.Mesh001_1.geometry}
+            material={materials["dbl_Layer0_002.001"]}
+          />
+          <mesh
+            geometry={nodes.Mesh001_2.geometry}
+            material={materials["dbl_Layer0_003.001"]}
+          />
+          <mesh
+            geometry={nodes.Mesh001_3.geometry}
+            material={materials["dbl_Layer0_005.001"]}
+          />
+          <mesh
+            geometry={nodes.Mesh001_4.geometry}
+            material={materials["dbl_Layer0_008.001"]}
+          />
+        </group>
+        <mesh
+          geometry={nodes.Cube185.geometry}
+          material={materials["Material.150"]}
+          position={[0.961, 5.042, -2.031]}
         />
         <mesh
-          geometry={nodes.Mesh001_4.geometry}
-          material={materials["dbl_Layer0_008.001"]}
+          geometry={nodes.Cube184.geometry}
+          material={materials["Material.021"]}
+          position={[2.099, -2.725, 15.647]}
+          rotation={[Math.PI, -1.57, Math.PI]}
+          scale={0.098}
         />
-      </group>
-      <mesh
-        geometry={nodes.Cube185.geometry}
-        material={materials["Material.150"]}
-        position={[0.961, 5.042, -2.031]}
-      />
-      <mesh
-        geometry={nodes.Cube184.geometry}
-        material={materials["Material.021"]}
-        position={[2.099, -2.725, 15.647]}
-        rotation={[Math.PI, -1.57, Math.PI]}
-        scale={0.098}
-      />
-      <mesh
-        geometry={nodes.Cube157.geometry}
-        material={materials["Material.146"]}
-        position={[-2.838, -2.13, -14.911]}
-        rotation={[0, 1.568, 0]}
-        scale={0.098}
-      />
-      <mesh
-        geometry={nodes.Cube122.geometry}
-        material={materials.Material}
-        position={[6.941, -1.897, -1.525]}
-      />
-      <mesh
-        geometry={nodes.Cube094.geometry}
-        material={materials["Material.032"]}
-        position={[3.805, 4.78, -7.488]}
-        scale={1.459}
-      />
-      <mesh
-        geometry={nodes.Cube092.geometry}
-        material={materials["Material.034"]}
-        position={[5.372, 4.504, -2.316]}
-      />
-      <mesh
-        geometry={nodes.Cube003.geometry}
-        material={materials.Geb2}
-        position={[3.918, 0.711, -6.059]}
-        rotation={[Math.PI, -1.567, Math.PI]}
-        scale={3.508}
-      />
-      <mesh
-        geometry={nodes.Circle032.geometry}
-        material={materials.Metallic}
-        position={[9.735, -2.298, -7.134]}
-        rotation={[0, 0.117, 0]}
-        scale={0.167}
-      />
-      <mesh
-        geometry={nodes.Plane022.geometry}
-        material={materials["Material.066"]}
-      />
-      {/* <mesh
+        <mesh
+          geometry={nodes.Cube157.geometry}
+          material={materials["Material.146"]}
+          position={[-2.838, -2.13, -14.911]}
+          rotation={[0, 1.568, 0]}
+          scale={0.098}
+        />
+        <mesh
+          geometry={nodes.Cube122.geometry}
+          material={materials.Material}
+          position={[6.941, -1.897, -1.525]}
+        />
+        <mesh
+          geometry={nodes.Cube094.geometry}
+          material={materials["Material.032"]}
+          position={[3.805, 4.78, -7.488]}
+          scale={1.459}
+        />
+        <mesh
+          geometry={nodes.Cube092.geometry}
+          material={materials["Material.034"]}
+          position={[5.372, 4.504, -2.316]}
+        />
+        <mesh
+          geometry={nodes.Cube003.geometry}
+          material={materials.Geb2}
+          position={[3.918, 0.711, -6.059]}
+          rotation={[Math.PI, -1.567, Math.PI]}
+          scale={3.508}
+        />
+        <mesh
+          geometry={nodes.Circle032.geometry}
+          material={materials.Metallic}
+          position={[9.735, -2.298, -7.134]}
+          rotation={[0, 0.117, 0]}
+          scale={0.167}
+        />
+        <mesh
+          geometry={nodes.Plane022.geometry}
+          material={materials["Material.066"]}
+        />
+        {/* <mesh
         geometry={nodes.Cube014.geometry}
         material={materials["Material.146"]}
       />
@@ -167,7 +166,7 @@ export function FinalGeb5(props) {
         geometry={nodes.Cube052.geometry}
         material={materials["Material.021"]}
       /> */}
-      {/* <mesh
+        {/* <mesh
         geometry={nodes.Cube012.geometry}
         material={materials["Material.021"]}
       />
@@ -183,19 +182,19 @@ export function FinalGeb5(props) {
         geometry={nodes.Cube002.geometry}
         material={materials["Material.021"]}
       /> */}
-      <mesh
-        geometry={nodes._Light_Area_Of_Street_lamp_B.geometry}
-        material={materials["Emission_ Color_Palette"]}
-        position={[8.924, -2.832, 0]}
-        scale={0.549}
-      />
-      <mesh
-        geometry={nodes.Base_Of_Street_Lamp_B.geometry}
-        material={materials.Metal_Color_Palette}
-        position={[8.924, -2.832, 0]}
-        scale={0.549}
-      />
-      {/* <mesh
+        <mesh
+          geometry={nodes._Light_Area_Of_Street_lamp_B.geometry}
+          material={materials["Emission_ Color_Palette"]}
+          position={[8.924, -2.832, 0]}
+          scale={0.549}
+        />
+        <mesh
+          geometry={nodes.Base_Of_Street_Lamp_B.geometry}
+          material={materials.Metal_Color_Palette}
+          position={[8.924, -2.832, 0]}
+          scale={0.549}
+        />
+        {/* <mesh
         geometry={nodes.Cube145.geometry}
         material={materials["Material.146"]}
       />
@@ -207,7 +206,7 @@ export function FinalGeb5(props) {
         geometry={nodes.Cube145_2.geometry}
         material={materials["Material.146"]}
       /> */}
-    </group>
+      </group>
     </PresentationControls>
   );
 }
