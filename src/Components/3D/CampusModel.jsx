@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.3 campusModel.glb --transform
 */
 
 import React, { useEffect } from "react";
-import { useFBX, useGLTF } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { useControls } from "leva";
 
@@ -15,7 +15,7 @@ export function CampusModel(props) {
   const { camera } = useThree();
   const { position, rotation } = useControls({
     position: {
-      value: [268, 37.2, -136],
+      value: [264, 37.2, -136],
       step: 2,
     },
     rotation: { value: [0.2, 2.4, -0.2], step: 0.2 },

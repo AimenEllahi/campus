@@ -5,18 +5,18 @@ Command: npx gltfjsx@6.2.3 FinalGeb5.glb --transform
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
-
+import { useControls } from "leva";
 export function FinalGeb5(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb5-transformed.glb");
 
   return (
     <group
-      onClick={() => props.setActiveState(3)}
+      onClick={() => props.setActiveState(5)}
       {...props}
       dispose={null}
-      position={[159, 5, -56]}
-      rotation={[-0.05, -5.6, 0]}
-      scale={1.4}
+      position={[179, 4, -72]}
+      rotation={[-0.05, -6, 0]}
+      scale={1.1}
     >
       <group
         position={[0.356, -2.853, -15.024]}

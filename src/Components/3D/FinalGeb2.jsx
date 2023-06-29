@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.3 FinalGeb2.glb --transform
 
 import React from "react";
 import { useGLTF, PresentationControls } from "@react-three/drei";
-
+import { useControls } from "leva";
 export function FinalGeb2(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb2-transformed.glb");
 
@@ -20,10 +20,10 @@ export function FinalGeb2(props) {
         name='building6'
         {...props}
         dispose={null}
-        position={[10, 5, -56]}
-        rotation={[0, -5.8, 0]}
-        scale={2.4}
-        onClick={() => props.setActiveState(6)}
+        position={[-12, -1, -12]}
+        rotation={[0, -6, 0]}
+        scale={2}
+        onClick={() => props.setActiveState(2)}
       >
         <group
           position={[-3.907, -2.853, 4.911]}
@@ -114,10 +114,7 @@ export function FinalGeb2(props) {
           geometry={nodes.Plane028.geometry}
           material={materials["Material.143"]}
         />
-        <mesh
-          geometry={nodes.Cube002.geometry}
-          material={materials["Material.020"]}
-        />
+
         <mesh
           geometry={nodes.Plane008.geometry}
           material={materials["Material.143"]}

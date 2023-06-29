@@ -13,7 +13,7 @@ export function GEB4(props) {
 
   return (
     <group
-      onClick={() => props.setActiveState(1)}
+      onClick={() => props.setActiveState(4)}
       {...props}
       dispose={null}
       position={[220, 8, -65]}

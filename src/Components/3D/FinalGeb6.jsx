@@ -5,18 +5,25 @@ Command: npx gltfjsx@6.2.3 FinalGeb6.glb --transform
 
 import React from "react";
 import { useGLTF } from "@react-three/drei";
+import { useControls } from "leva";
 
 export function FinalGeb6(props) {
   const { nodes, materials } = useGLTF("/Models/FinalGeb6-transformed.glb");
-
+  const { position, rotation } = useControls("GEB1", {
+    position: {
+      value: [69, 2, 72],
+      step: 2,
+    },
+    rotation: { value: [-0.1, 1.2, 0], step: 0.2 },
+  });
   return (
     <group
-      onClick={() => props.setActiveState(2)}
+      onClick={() => props.setActiveState(6)}
       name='building2'
       {...props}
       dispose={null}
-      position={[91, 5, 70]}
-      rotation={[-0.1, 1.2, 0]}
+      position={position}
+      rotation={rotation}
       scale={1.7}
     >
       <mesh

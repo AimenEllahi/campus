@@ -5,11 +5,17 @@ Command: npx gltfjsx@6.2.3 FinalGeb4.glb --transform
 
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
-
+import { useControls } from "leva";
 export function FinalGeb4(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/Models/FinalGeb4-transformed.glb");
-
+  const { position, rotation } = useControls("GEB4", {
+    position: {
+      value: [76, -10, -76],
+      step: 2,
+    },
+    rotation: { value: [0, -6.1, 0], step: 0.2 },
+  });
   return (
     <group
       onClick={() => props.setActiveState(4)}
@@ -17,8 +23,8 @@ export function FinalGeb4(props) {
       ref={group}
       {...props}
       dispose={null}
-      position={[68, -4, -102]}
-      rotation={[0, -6.1, 0]}
+      position={position}
+      rotation={rotation}
       scale={2.2}
     >
       <group name='Scene'>

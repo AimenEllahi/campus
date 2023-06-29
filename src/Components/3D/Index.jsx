@@ -8,10 +8,11 @@ import { FinalGeb5 } from "./FinalGeb5";
 import { FinalGeb6 } from "./FinalGeb6";
 import { Geb7 } from "./Geb7";
 import { GEB4 } from "./GEB4";
+import { Model as Geb9 } from "./Geb9";
+import { Geb1 } from "./GEB1";
 import Loader from "./Loader/Loader";
 import gsap from "gsap";
 import { PresentationControls } from "@react-three/drei";
-import Controls from "./controls";
 
 const CameraController = ({ activeState }) => {
   console.log(activeState);
@@ -51,7 +52,12 @@ const CameraController = ({ activeState }) => {
       case 7:
         gsapAnimation({ x: 210, y: 7, z: 14 });
         break;
-
+      case 8:
+        gsapAnimation({ x: 210, y: 7, z: 14 });
+        break;
+      case 9:
+        gsapAnimation({ x: 210, y: 7, z: 14 });
+        break;
       default:
         break;
     }
@@ -77,14 +83,17 @@ export default function Index() {
             azimuth={[-0.2, 0.2]}
           >
             <CampusModel setActiveState={setActiveState} />
-
+            <Geb1 setActiveState={setActiveState} />
+            <Geb7 setActiveState={setActiveState} />
+            <Geb9 setActiveState={setActiveState} />
             <FinalGeb2 setActiveState={setActiveState} />
-            <FinalGeb4 setActiveState={setActiveState} />
             <FinalGeb3 setActiveState={setActiveState} />
+
+            <FinalGeb4 setActiveState={setActiveState} />
+
             <FinalGeb5 setActiveState={setActiveState} />
             <FinalGeb6 setActiveState={setActiveState} />
-            <Geb7 setActiveState={setActiveState} />
-            <GEB4 setActiveState={setActiveState} />
+            {/* <GEB4 setActiveState={setActiveState} /> */}
           </PresentationControls>
 
           {/* <Controls /> */}

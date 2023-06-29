@@ -10,13 +10,6 @@ import { useControls } from "leva";
 export function Geb7(props) {
   const group = useRef();
   const { nodes, materials } = useGLTF("/Models/Geb7-transformed.glb");
-  const { position, rotation } = useControls("GEB7", {
-    position: {
-      value: [165, 2, 76],
-      step: 2,
-    },
-    rotation: { value: [0, 1.6, -0.2], step: 0.2 },
-  });
 
   return (
     <group
@@ -24,9 +17,9 @@ export function Geb7(props) {
       ref={group}
       {...props}
       dispose={null}
-      position={position}
-      rotation={rotation}
-      scale={2}
+      position={[199, 0, 0]}
+      rotation={[-0.1, -5.8, 0]}
+      scale={1.5}
     >
       <group name='Scene'>
         <group
