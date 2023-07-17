@@ -1,47 +1,54 @@
 import React, { Suspense, useState, useEffect } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { CampusModel } from "./CampusModel";
-import { FinalGeb2 } from "./FinalGeb2";
-import { FinalGeb4 } from "./FinalGeb4";
-import { FinalGeb3 } from "./FinalGeb3";
-import { FinalGeb5 } from "./FinalGeb5";
-import { FinalGeb6 } from "./FinalGeb6";
+import { FINALgeb2 } from "./FINALgeb2";
+import { FINALgeb4 } from "./FINALgeb4";
+import { FINALgeb3 } from "./FINALgeb3";
+import { FINALgeb5 } from "./FINALgeb5";
+import { FINALgeb6 } from "./FINALgeb6";
 import { Geb7 } from "./Geb7";
-import { GEB4 } from "./GEB4";
-import { Model as Geb9 } from "./Geb9";
-import { Geb1 } from "./GEB1";
+import { FINALgeb1 } from "./FINALgeb1";
+import { FINALgeb9 } from "./FINALgeb9";
+import { FINALgeb7 } from "./FINALgeb7";
+// import { Landscapenew } from "./Landscapenew";
 import Loader from "./Loader/Loader";
 import gsap from "gsap";
-import { PresentationControls } from "@react-three/drei";
+import { PresentationControls, OrbitControls } from "@react-three/drei";
+//import Controls from "./controls";
+import { useControls } from "leva";
+//define useGLTF hook
+import { useGLTF } from "@react-three/drei";
+import ModelLandscape from "./ModelLandscape";
 
 const CameraController = ({ activeState }) => {
   console.log(activeState);
   const { camera } = useThree();
-  const gsapAnimation = (pos) => {
+  const gsapAnimation = (pos, duration) => {
     gsap.to(camera.position, {
       x: pos.x,
       y: pos.y,
       z: pos.z,
-      duration: 4,
+      duration: duration || 4,
       yoyoEase: true,
     });
   };
   useEffect(() => {
     switch (activeState) {
+      //{"cameraPosition":[26,28,207]}
       case 0:
-        gsapAnimation({ x: 264, y: 37, z: -136 });
+        gsapAnimation({ x: 26, y: 28, z: 207 });
         break;
       case 1:
-        gsapAnimation({ x: 48, y: 15.2, z: -6 });
+        gsapAnimation({ x: 65, y: 16, z: -54 }); //
         break;
       case 2:
-        gsapAnimation({ x: 32, y: 9, z: -38 });
+        gsapAnimation({ x: 115, y: 20, z: 51 }); //
         break;
       case 3:
         gsapAnimation({ x: 68, y: 13, z: -108 });
         break;
       case 4:
-        gsapAnimation({ x: 126, y: 3.2, z: -120 });
+        gsapAnimation({ x: 26, y: 6, z: 147 }, 2); //
         break;
       case 5:
         gsapAnimation({ x: 214, y: 7.2, z: -114 });
@@ -68,7 +75,7 @@ export default function Index() {
 
   return (
     <div style={{ width: "100%", height: "100vh" }}>
-      <Canvas camera={{ position: [0, 0, 0], fov: 37 }}>
+      <Canvas camera={{ position: [0, 0, 0], fov: 45, far: 10000 }}>
         <ambientLight intensity={0.8} />
         <spotLight position={[10, 15, 10]} angle={0.3} />
         <Suspense fallback={<Loader />}>
@@ -79,18 +86,25 @@ export default function Index() {
             polar={[0, 0]}
             azimuth={[-0.2, 0.2]}
           >
-            <CampusModel setActiveState={setActiveState} />
-            <Geb1 setActiveState={setActiveState} />
+            {/* <CampusModel setActiveState={setActiveState} /> */}
+
+            {/* <Landscapenew setActiveState={setActiveState} /> */}
+            <ModelLandscape setActiveState={setActiveState} />
+            <FINALgeb1 setActiveState={setActiveState} />
+            <FINALgeb2 setActiveState={setActiveState} />
+            <FINALgeb3 setActiveState={setActiveState} />
+            <FINALgeb4 setActiveState={setActiveState} />
+            <FINALgeb5 setActiveState={setActiveState} />
+            <FINALgeb6 setActiveState={setActiveState} />
+            <FINALgeb7 setActiveStat={setActiveState} />
+            <FINALgeb9 setActiveState={setActiveState} />
+
+            {/*
+           
+            
+            
             <Geb7 setActiveState={setActiveState} />
-            <Geb9 setActiveState={setActiveState} />
-            <FinalGeb2 setActiveState={setActiveState} />
-            <FinalGeb3 setActiveState={setActiveState} />
-
-            <FinalGeb4 setActiveState={setActiveState} />
-
-            <FinalGeb5 setActiveState={setActiveState} />
-            <FinalGeb6 setActiveState={setActiveState} />
-            {/* <GEB4 setActiveState={setActiveState} /> */}
+            <GEB4 setActiveState={setActiveState} /> */}
           </PresentationControls>
 
           {/* <Controls /> */}

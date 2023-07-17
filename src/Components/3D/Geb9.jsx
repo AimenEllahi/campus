@@ -19,7 +19,7 @@ export function Model(props) {
       ref={group}
       {...props}
       dispose={null}
-      scale={1.5}
+      scale={1.2}
       onClick={() => props.setActiveState(9)}
     >
       <group name='Scene'>
